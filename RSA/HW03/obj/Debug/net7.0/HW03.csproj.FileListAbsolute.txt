@@ -1,0 +1,15 @@
+C:\Users\Jesús\Desktop\ics-0031-2023-f\HW03\HW03\bin\Debug\net7.0\HW03.exe
+C:\Users\Jesús\Desktop\ics-0031-2023-f\HW03\HW03\bin\Debug\net7.0\HW03.deps.json
+C:\Users\Jesús\Desktop\ics-0031-2023-f\HW03\HW03\bin\Debug\net7.0\HW03.runtimeconfig.json
+C:\Users\Jesús\Desktop\ics-0031-2023-f\HW03\HW03\bin\Debug\net7.0\HW03.dll
+C:\Users\Jesús\Desktop\ics-0031-2023-f\HW03\HW03\bin\Debug\net7.0\HW03.pdb
+C:\Users\Jesús\Desktop\ics-0031-2023-f\HW03\HW03\obj\Debug\net7.0\HW03.csproj.AssemblyReference.cache
+C:\Users\Jesús\Desktop\ics-0031-2023-f\HW03\HW03\obj\Debug\net7.0\HW03.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jesús\Desktop\ics-0031-2023-f\HW03\HW03\obj\Debug\net7.0\HW03.AssemblyInfoInputs.cache
+C:\Users\Jesús\Desktop\ics-0031-2023-f\HW03\HW03\obj\Debug\net7.0\HW03.AssemblyInfo.cs
+C:\Users\Jesús\Desktop\ics-0031-2023-f\HW03\HW03\obj\Debug\net7.0\HW03.csproj.CoreCompileInputs.cache
+C:\Users\Jesús\Desktop\ics-0031-2023-f\HW03\HW03\obj\Debug\net7.0\HW03.dll
+C:\Users\Jesús\Desktop\ics-0031-2023-f\HW03\HW03\obj\Debug\net7.0\refint\HW03.dll
+C:\Users\Jesús\Desktop\ics-0031-2023-f\HW03\HW03\obj\Debug\net7.0\HW03.pdb
+C:\Users\Jesús\Desktop\ics-0031-2023-f\HW03\HW03\obj\Debug\net7.0\HW03.genruntimeconfig.cache
+C:\Users\Jesús\Desktop\ics-0031-2023-f\HW03\HW03\obj\Debug\net7.0\ref\HW03.dll

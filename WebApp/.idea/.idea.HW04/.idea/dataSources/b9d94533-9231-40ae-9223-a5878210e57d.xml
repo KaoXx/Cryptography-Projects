@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="app">
+  <database-model serializer="dbm" dbms="SQLITE" family-id="SQLITE" format-version="4.49">
+    <root id="1">
+      <ServerVersion>3.43.0</ServerVersion>
+    </root>
+    <schema id="2" parent="1" name="main">
+      <Current>1</Current>
+      <IntrospectionTimestamp>2023-11-09.17:41:50.574</IntrospectionTimestamp>
+      <LocalIntrospectionTimestamp>2023-11-09.15:41:50</LocalIntrospectionTimestamp>
+    </schema>
+    <table id="3" parent="2" name="AspNetRoleClaims"/>
+    <table id="4" parent="2" name="AspNetRoles"/>
+    <table id="5" parent="2" name="AspNetUserClaims"/>
+    <table id="6" parent="2" name="AspNetUserLogins"/>
+    <table id="7" parent="2" name="AspNetUserRoles"/>
+    <table id="8" parent="2" name="AspNetUserTokens"/>
+    <table id="9" parent="2" name="AspNetUsers"/>
+    <table id="10" parent="2" name="Persons"/>
+    <table id="11" parent="2" name="__EFMigrationsHistory"/>
+    <table id="12" parent="2" name="sqlite_master">
+      <System>1</System>
+    </table>
+    <table id="13" parent="2" name="sqlite_sequence">
+      <System>1</System>
+    </table>
+    <column id="14" parent="3" name="Id">
+      <AutoIncrement>1</AutoIncrement>
+      <DasType>INTEGER|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="15" parent="3" name="RoleId">
+      <DasType>TEXT|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="16" parent="3" name="ClaimType">
+      <DasType>TEXT|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="17" parent="3" name="ClaimValue">
+      <DasType>TEXT|0s</DasType>
+      <Position>4</Position>
+    </column>
+    <foreign-key id="18" parent="3" name="FK_AspNetRoleClaims_AspNetRoles_RoleId">
+      <ColNames>RoleId</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>Id</RefColNames>
+      <RefTableName>AspNetRoles</RefTableName>
+    </foreign-key>
+    <index id="19" parent="3" name="IX_AspNetRoleClaims_RoleId">
+      <ColNames>RoleId</ColNames>
+    </index>
+    <key id="20" parent="3" name="PK_AspNetRoleClaims">
+      <ColNames>Id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="21" parent="4" name="Id">
+      <DasType>TEXT|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="22" parent="4" name="Name">
+      <DasType>TEXT|0s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="23" parent="4" name="NormalizedName">
+      <DasType>TEXT|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="24" parent="4" name="ConcurrencyStamp">
+      <DasType>TEXT|0s</DasType>
+      <Position>4</Position>
+    </column>
+    <index id="25" parent="4" name="sqlite_autoindex_AspNetRoles_1">
+      <ColNames>Id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Unique>1</Unique>
+    </index>
+    <index id="26" parent="4" name="RoleNameIndex">
+      <ColNames>NormalizedName</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="27" parent="4" name="PK_AspNetRoles">
+      <ColNames>Id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>sqlite_autoindex_AspNetRoles_1</UnderlyingIndexName>
+    </key>
+    <column id="28" parent="5" name="Id">
+      <AutoIncrement>1</AutoIncrement>
+      <DasType>INTEGER|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="29" parent="5" name="UserId">
+      <DasType>TEXT|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="30" parent="5" name="ClaimType">
+      <DasType>TEXT|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="31" parent="5" name="ClaimValue">
+      <DasType>TEXT|0s</DasType>
+      <Position>4</Position>
+    </column>
+    <foreign-key id="32" parent="5" name="FK_AspNetUserClaims_AspNetUsers_UserId">
+      <ColNames>UserId</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>Id</RefColNames>
+      <RefTableName>AspNetUsers</RefTableName>
+    </foreign-key>
+    <index id="33" parent="5" name="IX_AspNetUserClaims_UserId">
+      <ColNames>UserId</ColNames>
+    </index>
+    <key id="34" parent="5" name="PK_AspNetUserClaims">
+      <ColNames>Id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="35" parent="6" name="LoginProvider">
+      <DasType>TEXT|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="36" parent="6" name="ProviderKey">
+      <DasType>TEXT|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="37" parent="6" name="ProviderDisplayName">
+      <DasType>TEXT|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="38" parent="6" name="UserId">
+      <DasType>TEXT|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <foreign-key id="39" parent="6" name="FK_AspNetUserLogins_AspNetUsers_UserId">
+      <ColNames>UserId</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>Id</RefColNames>
+      <RefTableName>AspNetUsers</RefTableName>
+    </foreign-key>
+    <index id="40" parent="6" name="sqlite_autoindex_AspNetUserLogins_1">
+      <ColNames>LoginProvider
+ProviderKey</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Unique>1</Unique>
+    </index>
+    <index id="41" parent="6" name="IX_AspNetUserLogins_UserId">
+      <ColNames>UserId</ColNames>
+    </index>
+    <key id="42" parent="6" name="PK_AspNetUserLogins">
+      <ColNames>LoginProvider
+ProviderKey</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>sqlite_autoindex_AspNetUserLogins_1</UnderlyingIndexName>
+    </key>
+    <column id="43" parent="7" name="UserId">
+      <DasType>TEXT|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="44" parent="7" name="RoleId">
+      <DasType>TEXT|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <foreign-key id="45" parent="7" name="FK_AspNetUserRoles_AspNetUsers_UserId">
+      <ColNames>UserId</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>Id</RefColNames>
+      <RefTableName>AspNetUsers</RefTableName>
+    </foreign-key>
+    <foreign-key id="46" parent="7" name="FK_AspNetUserRoles_AspNetRoles_RoleId">
+      <ColNames>RoleId</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>Id</RefColNames>
+      <RefTableName>AspNetRoles</RefTableName>
+    </foreign-key>
+    <index id="47" parent="7" name="sqlite_autoindex_AspNetUserRoles_1">
+      <ColNames>UserId
+RoleId</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Unique>1</Unique>
+    </index>
+    <index id="48" parent="7" name="IX_AspNetUserRoles_RoleId">
+      <ColNames>RoleId</ColNames>
+    </index>
+    <key id="49" parent="7" name="PK_AspNetUserRoles">
+      <ColNames>UserId
+RoleId</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>sqlite_autoindex_AspNetUserRoles_1</UnderlyingIndexName>
+    </key>
+    <column id="50" parent="8" name="UserId">
+      <DasType>TEXT|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="51" parent="8" name="LoginProvider">
+      <DasType>TEXT|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="52" parent="8" name="Name">
+      <DasType>TEXT|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="53" parent="8" name="Value">
+      <DasType>TEXT|0s</DasType>
+      <Position>4</Position>
+    </column>
+    <foreign-key id="54" parent="8" name="FK_AspNetUserTokens_AspNetUsers_UserId">
+      <ColNames>UserId</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>Id</RefColNames>
+      <RefTableName>AspNetUsers</RefTableName>
+    </foreign-key>
+    <index id="55" parent="8" name="sqlite_autoindex_AspNetUserTokens_1">
+      <ColNames>UserId
+LoginProvider
+Name</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Unique>1</Unique>
+    </index>
+    <key id="56" parent="8" name="PK_AspNetUserTokens">
+      <ColNames>UserId
+LoginProvider
+Name</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>sqlite_autoindex_AspNetUserTokens_1</UnderlyingIndexName>
+    </key>
+    <column id="57" parent="9" name="Id">
+      <DasType>TEXT|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="58" parent="9" name="PasswordPlainText">
+      <DasType>TEXT|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="59" parent="9" name="PasswordCesar">
+      <DasType>TEXT|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="60" parent="9" name="PasswordVigenere">
+      <DasType>TEXT|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="61" parent="9" name="UserName">
+      <DasType>TEXT|0s</DasType>
+      <Position>5</Position>
+    </column>
+    <column id="62" parent="9" name="NormalizedUserName">
+      <DasType>TEXT|0s</DasType>
+      <Position>6</Position>
+    </column>
+    <column id="63" parent="9" name="Email">
+      <DasType>TEXT|0s</DasType>
+      <Position>7</Position>
+    </column>
+    <column id="64" parent="9" name="NormalizedEmail">
+      <DasType>TEXT|0s</DasType>
+      <Position>8</Position>
+    </column>
+    <column id="65" parent="9" name="EmailConfirmed">
+      <DasType>INTEGER|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>9</Position>
+    </column>
+    <column id="66" parent="9" name="PasswordHash">
+      <DasType>TEXT|0s</DasType>
+      <Position>10</Position>
+    </column>
+    <column id="67" parent="9" name="SecurityStamp">
+      <DasType>TEXT|0s</DasType>
+      <Position>11</Position>
+    </column>
+    <column id="68" parent="9" name="ConcurrencyStamp">
+      <DasType>TEXT|0s</DasType>
+      <Position>12</Position>
+    </column>
+    <column id="69" parent="9" name="PhoneNumber">
+      <DasType>TEXT|0s</DasType>
+      <Position>13</Position>
+    </column>
+    <column id="70" parent="9" name="PhoneNumberConfirmed">
+      <DasType>INTEGER|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>14</Position>
+    </column>
+    <column id="71" parent="9" name="TwoFactorEnabled">
+      <DasType>INTEGER|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>15</Position>
+    </column>
+    <column id="72" parent="9" name="LockoutEnd">
+      <DasType>TEXT|0s</DasType>
+      <Position>16</Position>
+    </column>
+    <column id="73" parent="9" name="LockoutEnabled">
+      <DasType>INTEGER|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>17</Position>
+    </column>
+    <column id="74" parent="9" name="AccessFailedCount">
+      <DasType>INTEGER|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>18</Position>
+    </column>
+    <index id="75" parent="9" name="sqlite_autoindex_AspNetUsers_1">
+      <ColNames>Id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Unique>1</Unique>
+    </index>
+    <index id="76" parent="9" name="UserNameIndex">
+      <ColNames>NormalizedUserName</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="77" parent="9" name="EmailIndex">
+      <ColNames>NormalizedEmail</ColNames>
+    </index>
+    <key id="78" parent="9" name="PK_AspNetUsers">
+      <ColNames>Id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>sqlite_autoindex_AspNetUsers_1</UnderlyingIndexName>
+    </key>
+    <column id="79" parent="10" name="Id">
+      <DasType>TEXT|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="80" parent="10" name="PersonName">
+      <DasType>TEXT|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="81" parent="10" name="AppUserId">
+      <DasType>TEXT|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <foreign-key id="82" parent="10" name="FK_Persons_AspNetUsers_AppUserId">
+      <ColNames>AppUserId</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>Id</RefColNames>
+      <RefTableName>AspNetUsers</RefTableName>
+    </foreign-key>
+    <index id="83" parent="10" name="sqlite_autoindex_Persons_1">
+      <ColNames>Id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Unique>1</Unique>
+    </index>
+    <index id="84" parent="10" name="IX_Persons_AppUserId">
+      <ColNames>AppUserId</ColNames>
+    </index>
+    <key id="85" parent="10" name="PK_Persons">
+      <ColNames>Id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>sqlite_autoindex_Persons_1</UnderlyingIndexName>
+    </key>
+    <column id="86" parent="11" name="MigrationId">
+      <DasType>TEXT|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="87" parent="11" name="ProductVersion">
+      <DasType>TEXT|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <index id="88" parent="11" name="sqlite_autoindex___EFMigrationsHistory_1">
+      <ColNames>MigrationId</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Unique>1</Unique>
+    </index>
+    <key id="89" parent="11" name="PK___EFMigrationsHistory">
+      <ColNames>MigrationId</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>sqlite_autoindex___EFMigrationsHistory_1</UnderlyingIndexName>
+    </key>
+    <column id="90" parent="12" name="type">
+      <DasType>TEXT|0s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="91" parent="12" name="name">
+      <DasType>TEXT|0s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="92" parent="12" name="tbl_name">
+      <DasType>TEXT|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="93" parent="12" name="rootpage">
+      <DasType>INT|0s</DasType>
+      <Position>4</Position>
+    </column>
+    <column id="94" parent="12" name="sql">
+      <DasType>TEXT|0s</DasType>
+      <Position>5</Position>
+    </column>
+    <column id="95" parent="13" name="name">
+      <Position>1</Position>
+    </column>
+    <column id="96" parent="13" name="seq">
+      <Position>2</Position>
+    </column>
+  </database-model>
+</dataSource>
